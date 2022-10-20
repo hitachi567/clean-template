@@ -1,13 +1,12 @@
 {
-    "name": "template",
+    "name": "clean-template",
     "version": "0.0.1",
-    "description": "template for typescript nodejs projects",
+    "description": "clean template for typescript nodejs projects",
     "scripts": {
-        "start": "node ./build/index.js",
-        "build": "npm run clean && tsc",
-        "clean": "rimraf ./build",
-        "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-        "test": "ts-mocha -p ./tsconfig.json src/**/*.test.ts"
+        "start": "node build/index.js",
+        "build": "rimraf build && tsc",
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "test": "ts-mocha -p tsconfig.json src/**/*.test.ts"
     },
     "dependencies": {},
     "devDependencies": {
